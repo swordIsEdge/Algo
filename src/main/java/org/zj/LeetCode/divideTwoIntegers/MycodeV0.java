@@ -22,10 +22,16 @@ public class MycodeV0 {
 
     public int devideCore(int dividend, int divisor) {
         int res = 0;
-        for(int i = 31; i >= 0; i--) {
-            int tmp = divisor << i;
-            if (dividend <= tmp) {
-                dividend -= tmp;
+        int tmp = divisor;
+        int eq = 0;
+        while (tmp<<1 > dividend) {
+            tmp<<=1;
+            eq++;
+        }
+        for(int i = eq; i >= 0; i--) {
+            int ntemp = divisor << i;
+            if (dividend <= ntemp) {
+                dividend -= ntemp;
                 res = (res << 1) + 1;
             } else {
                 res = res << 1;
