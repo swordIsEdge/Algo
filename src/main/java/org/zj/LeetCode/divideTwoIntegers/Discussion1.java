@@ -2,7 +2,7 @@ package org.zj.LeetCode.divideTwoIntegers;
 
 public class Discussion1 {
     public static void main(String... args){
-        int a = new Discussion1().divide(-1584, 13);
+        int a = new Discussion1().divide(-8, -5);
 
         System.out.println(a);
     }
