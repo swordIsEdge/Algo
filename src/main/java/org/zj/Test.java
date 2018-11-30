@@ -27,6 +27,7 @@ public class Test {
         return res;
     }
     public static void main(String... args){
-       boolean res =   new Test().isMatch("ab", "a*");
+        String s = "abcdefg";
+        System.out.println(s.substring(0,3));
     }
 }
