@@ -10,12 +10,12 @@ import java.util.Queue;
 public class ConstrucTreeNode {
     public static void main(String... args) {
         int[] nodes = {1, 2, 3, 4, 5, 6, 7};
-        TreeNode root = construc(nodes);
+        TreeNode root = construct(nodes);
 
         System.out.print(root.val);
     }
 
-    public static TreeNode construc(int[] nodes) {
+    public static TreeNode construct(int[] nodes) {
         if (nodes == null || nodes.length == 0) {
             return null;
         }

@@ -5,7 +5,7 @@ package org.zj.dataStructure;
  * Date:2018/8/6
  */
 public class ListNode {
-    public  int val;
+    public int val;
     public ListNode next = null;
 
     public ListNode(int val) {
@@ -29,6 +29,12 @@ public class ListNode {
             return true;
         }
         return this.next.equals(other.next);
+    }
+
+    @Override
+    public String toString() {
+
+        return val + "-> " + (next == null ? "NULL" : next.toString());
     }
 
     public static ListNode getInstanceFromArray(int[] array) {
