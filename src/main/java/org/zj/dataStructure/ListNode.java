@@ -12,24 +12,24 @@ public class ListNode {
         this.val = val;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (!(obj instanceof ListNode)) {
-            return false;
-
-        }
-        ListNode other = (ListNode) obj;
-        if (this.val != other.val) {
-            return false;
-        }
-        if (this.next == null || other.next == null) {
-            return true;
-        }
-        return this.next.equals(other.next);
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (!(obj instanceof ListNode)) {
+//            return false;
+//
+//        }
+//        ListNode other = (ListNode) obj;
+//        if (this.val != other.val) {
+//            return false;
+//        }
+//        if (this.next == null || other.next == null) {
+//            return true;
+//        }
+//        return this.next.equals(other.next);
+//    }
 
     @Override
     public String toString() {
