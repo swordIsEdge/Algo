@@ -31,10 +31,15 @@ public class ListNode {
 //        return this.next.equals(other.next);
 //    }
 
+//    @Override
+//    public String toString() {
+//
+//        return val + "-> " + (next == null ? "NULL" : next.toString());
+//    }
+
     @Override
     public String toString() {
-
-        return val + "-> " + (next == null ? "NULL" : next.toString());
+        return String.valueOf(val);
     }
 
     public static ListNode getInstanceFromArray(int[] array) {
