@@ -62,7 +62,7 @@ public class SortList {
     }
 
     /* merge listOne and listTwo.
-    Save the sorted list head into rst.newHead
+    Save the sorted list slot into rst.newHead
     Save the last node of the sorted list into rst.newTail
     */
     private void merge(ListNode listOne, ListNode listTwo, MergeHelper rst) {

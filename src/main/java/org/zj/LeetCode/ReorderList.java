@@ -21,7 +21,7 @@ public class ReorderList {
 
         // step 1. cut the list to two halves
         // prev will be the tail of 1st half
-        // slow will be the head of 2nd half
+        // slow will be the slot of 2nd half
         ListNode prev = null, slow = head, fast = head, l1 = head;
 
         while (fast != null && fast.next != null) {

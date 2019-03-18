@@ -32,9 +32,6 @@ public class ScrambleString {
                     (isScramble(s1Left, s2Right) && isScramble(s1Right, s2Left));
         } else {
             int mid = len / 2;
-
-
-
         }
         return false;
 

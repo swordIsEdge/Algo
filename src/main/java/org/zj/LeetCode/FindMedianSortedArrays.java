@@ -104,7 +104,7 @@ public class FindMedianSortedArrays {
         int m = B.length;
         // the following call is to make sure len(A) <= len(B).
         // yes, it calls itself, but at most once, shouldn't be
-        // consider a recursive solution
+        // consider a recursive getCount
         if (n > m)
             return findMedianSortedArrays2(B, A);
 
