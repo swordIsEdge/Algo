@@ -1,7 +1,5 @@
 package org.zj.dataStructure;
 
-import com.sun.org.apache.regexp.internal.RE;
-
 /**
  * @program: Algo
  * @description:
@@ -59,8 +57,8 @@ public class RedBlackTree {
         h.right = x.left;
         x.left = h;
 
-        h.color = h.color;
-        x.color = RED;
+        x.color = h.color;
+        h.color = RED;
 
         x.N = h.N;
         h.N = 1 + h.left.size() + h.right.size();
