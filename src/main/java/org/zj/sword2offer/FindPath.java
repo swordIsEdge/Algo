@@ -12,7 +12,7 @@ import java.util.Comparator;
  */
 public class FindPath {
     public static void main(String... args) {
-        TreeNode root = ConstrucTreeNode.construct(new int[]{1,2,3,4,5,6,7,4,-1,-1,-1,2,1,-1,-1});
+        TreeNode root = ConstrucTreeNode.construct(new Integer[]{1,2,3,4,5,6,7,4,-1,-1,-1,2,1,-1,-1});
         FindPath fp = new FindPath();
         fp.FindPath(root, 11);
         System.out.println(fp.result);

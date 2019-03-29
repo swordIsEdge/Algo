@@ -9,13 +9,13 @@ import java.util.Queue;
  */
 public class ConstrucTreeNode {
     public static void main(String... args) {
-        int[] nodes = {1, 2, 3, 4, 5, 6, 7};
+        Integer[] nodes = {1, 2, 3, 4, 5, 6, 7};
         TreeNode root = construct(nodes);
 
         System.out.print(root.val);
     }
 
-    public static TreeNode construct(int[] nodes) {
+    public static TreeNode construct(Integer[] nodes) {
         if (nodes == null || nodes.length == 0) {
             return null;
         }
@@ -28,7 +28,7 @@ public class ConstrucTreeNode {
         for (int i = 1; i < nodes.length; ) {
             TreeNode tmp = result.poll();
 
-            if (nodes[i] == -1) {
+            if (nodes[i] == null) {
                 tmp.left = null;
             } else {
                 tmp.left = new TreeNode(nodes[i]);
@@ -36,7 +36,7 @@ public class ConstrucTreeNode {
             }
 
             i++;
-            if (nodes[i] == -1) {
+            if (nodes[i] == null) {
                 tmp.right = null;
             } else {
                 tmp.right = new TreeNode(nodes[i]);

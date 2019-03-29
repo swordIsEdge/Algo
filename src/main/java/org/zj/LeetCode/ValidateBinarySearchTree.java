@@ -58,7 +58,7 @@ public class ValidateBinarySearchTree {
         return true;
     }
     public static void main(String... args){
-        TreeNode node = ConstrucTreeNode.construct(new int[]{10,5,15,-1,-1,6,20});
+        TreeNode node = ConstrucTreeNode.construct(new Integer[]{10,5,15,-1,-1,6,20});
         boolean res = new ValidateBinarySearchTree().isValidBST(node);
         System.out.println(res);
     }
