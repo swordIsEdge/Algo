@@ -36,6 +36,9 @@ public class ConstrucTreeNode {
             }
 
             i++;
+            if (i == nodes.length) {
+                break;
+            }
             if (nodes[i] == null) {
                 tmp.right = null;
             } else {
