@@ -13,7 +13,7 @@ public class BinaryTreePostorderTraversal {
             return result;
         }
         Stack<TreeNode> stack = new Stack<>();
-
+        return result;
 
     }
 }
