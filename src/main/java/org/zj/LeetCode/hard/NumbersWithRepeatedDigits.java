@@ -1,7 +1,7 @@
 package org.zj.LeetCode.hard;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.PriorityQueue;
 
 public class NumbersWithRepeatedDigits {
     public static void main(String[] args) {
@@ -89,5 +89,37 @@ public class NumbersWithRepeatedDigits {
             res *= hi--;
         }
         return res;
+    }
+
+    public static class MedianFinder {
+        PriorityQueue<Integer> maxHeap,minHeap;
+        int count;
+        public MedianFinder() {
+            count = 0;
+            maxHeap = new PriorityQueue<>((o1, o2) -> o2-o1);
+            minHeap = new PriorityQueue<>();
+        }
+
+        public void addNum(int num) {
+            count++;
+            maxHeap.add(num);
+
+            if (count%2==0){
+                minHeap.add(maxHeap.poll());
+            }else if (count>1 && minHeap.peek()<maxHeap.peek()){
+                minHeap.add(maxHeap.poll());
+                maxHeap.add(minHeap.poll());
+            }
+
+        }
+
+        public double findMedian() {
+            if (count==0)return 0;
+            if (count%2==1){
+                return maxHeap.peek();
+            }else {
+                return (maxHeap.peek()+minHeap.peek())/2.0;
+            }
+        }
     }
 }

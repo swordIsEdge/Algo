@@ -1,6 +1,5 @@
 package org.zj.test;
 
-import org.omg.CORBA.Environment;
 
 import java.util.Scanner;
 
