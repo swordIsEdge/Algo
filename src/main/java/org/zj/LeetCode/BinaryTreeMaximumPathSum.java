@@ -12,40 +12,39 @@ import org.zj.dataStructure.TreeNode;
 
 public class BinaryTreeMaximumPathSum {
 
-    public static void main(String... args){
-        TreeNode root = ConstrucTreeNode.construct(new Integer[]{-10, 9, 20, null, null, 15, 7});
+    public static void main(String... args) {
+        TreeNode root = ConstrucTreeNode.construct(new Integer[]{1,-2,-3,1,3,-2,null,-1});
         int max = new BinaryTreeMaximumPathSum().maxPathSum(root);
         System.out.println(max);
 
     }
 
 
+    int max;
 
-    int max ;
     public int maxPathSum(TreeNode root) {
         max = Integer.MIN_VALUE;
-        core(root, max);
+        core(root);
         return max;
     }
 
-    private int core(TreeNode root, int tmpLength) {
-
+    private int core(TreeNode root) {
+        int tmpMax = 0;
         if (root == null) {
-            max = Math.max(max, tmpLength);
-            return 0;
+            tmpMax = Integer.MIN_VALUE;
+        } else if (root.left == null && root.right == null) {
+            tmpMax = root.val;
+        } else {
+            int leftMax = core(root.left);
+            int rightMax = core(root.right);
+            int maxChild = Math.max(leftMax, rightMax);
+            tmpMax = root.val + (maxChild > 0 ? maxChild : 0);
+            int tmpThis = root.val+(leftMax>0?leftMax:0)+(rightMax>0?rightMax:0);
+            max = Math.max(max,tmpThis);
+
         }
+        max = Math.max(max, tmpMax);
+        return tmpMax;
 
-        tmpLength = tmpLength < 0 ? root.val : (tmpLength + root.val);
-        max = Math.max(max, tmpLength);
-
-        if (root.left == null && root.right == null) {
-            max = Math.max(max, tmpLength);
-            return root.val;
-        }
-        int leftMax = core(root.left, tmpLength) + root.val;
-        int rightMax = core(root.right, Math.max(tmpLength, leftMax)) + root.val;
-
-
-        return Math.max(leftMax, rightMax);
     }
 }
