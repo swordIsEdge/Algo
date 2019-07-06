@@ -1,6 +1,5 @@
 package org.zj.LeetCode;
 
-import com.sun.javafx.scene.control.skin.LabeledImpl;
 import org.zj.dataStructure.ConstructListNode;
 import org.zj.dataStructure.ListNode;
 

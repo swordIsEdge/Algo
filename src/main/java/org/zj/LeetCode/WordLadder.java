@@ -1,6 +1,7 @@
 package org.zj.LeetCode;
 
-import javafx.util.Pair;
+
+import org.zj.dataStructure.Pair;
 
 import java.util.*;
 
@@ -56,6 +57,7 @@ public class WordLadder {
 
         return 0;
     }
+
     public int ladderLength2(String beginWord, String endWord, List<String> wordList) {
 
         // Since all words are of same length.
@@ -113,6 +115,7 @@ public class WordLadder {
 
         return 0;
     }
+
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> set = new HashSet<>();
         for (String s : wordList) {
@@ -167,5 +170,6 @@ public class WordLadder {
         }
         return true;
     }
+
 
 }

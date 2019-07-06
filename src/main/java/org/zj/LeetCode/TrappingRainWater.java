@@ -1,6 +1,7 @@
 package org.zj.LeetCode;
 
-import javafx.util.Pair;
+
+import org.zj.dataStructure.Pair;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
