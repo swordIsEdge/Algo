@@ -8,13 +8,13 @@ import java.util.List;
  * @author: kasumi
  * @create: 2019-05-12 18:23
  **/
-class Node {
+class MNode {
     public int val;
     public List<Node> neighbors;
 
-    public Node() {}
+    public MNode() {}
 
-    public Node(int _val,List<Node> _neighbors) {
+    public MNode(int _val,List<Node> _neighbors) {
         val = _val;
         neighbors = _neighbors;
     }
