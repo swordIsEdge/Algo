@@ -7,7 +7,7 @@ package org.zj.dataStructure;
  * @create: 2019-03-12 10:00
  **/
 
-public class RedBlackTree {
+public class RedBlackTree1 {
     private static final boolean RED = true;
     private static final boolean BLACK = false;
 
